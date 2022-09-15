@@ -1,0 +1,174 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "5c3d1cc7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite um valor a ser reduzido em 15%: R$85\n",
+      "O novo valor é de R$ 72.25\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Módulo 1\n",
+    "#Q1 \n",
+    "valor = int(input('Digite um valor a ser reduzido em 15%: R$'))\n",
+    "valor = valor - valor * 0.15\n",
+    "print('O novo valor é de R$', valor)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "98ace7cb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite uma idade entre 0 e 150 anos: 150\n",
+      "Digite seu salário: R$30000\n",
+      "Digite seu sexo: M, F ou OUTRO -  outro\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Q2\n",
+    "idade = int(input('Digite uma idade entre 0 e 150 anos: '))\n",
+    "if idade <= 0 or idade > 150:\n",
+    "    print('Idade Inválida')\n",
+    "    \n",
+    "salario = int(input('Digite seu salário: R$'))\n",
+    "if salario <= 0:\n",
+    "    print('Salário inválido')\n",
+    "    \n",
+    "sexo = input(('Digite seu sexo: M, F ou OUTRO -  '))\n",
+    "if sexo.upper() != 'F' and sexo.upper() != 'M' and sexo.upper() != 'OUTRO':\n",
+    "    print('Sexo inválido')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "c7c2ca64",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Responda às seguintes perguntas com SIM (S) ou NAO (N)\n",
+      "\n",
+      "a) Mora perto da vítima? S\n",
+      "b) Já trabalhou com a vítima? N\n",
+      "c) Telefonou para a vítima? N\n",
+      "d) Esteve no local do crime? N\n",
+      "e) Devia para a vítima? N\n",
+      "\n",
+      "Tá liberado\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Q3\n",
+    "print('Responda às seguintes perguntas com SIM (S) ou NAO (N)')\n",
+    "print()\n",
+    "pontuacao = 0\n",
+    "a = input('a) Mora perto da vítima? ')\n",
+    "if a == 'S':\n",
+    "    pontuacao = pontuacao + 1\n",
+    "b = input('b) Já trabalhou com a vítima? ')\n",
+    "if b == 'S':\n",
+    "    pontuacao = pontuacao + 1\n",
+    "c = input('c) Telefonou para a vítima? ')\n",
+    "if c == 'S':\n",
+    "    pontuacao = pontuacao + 1\n",
+    "d = input('d) Esteve no local do crime? ')\n",
+    "if d == 'S':\n",
+    "    pontuacao = pontuacao + 1\n",
+    "e = input('e) Devia para a vítima? ')\n",
+    "if e == 'S':\n",
+    "    pontuacao = pontuacao + 1\n",
+    "print()\n",
+    "    \n",
+    "pontuacao_final = pontuacao\n",
+    "if pontuacao_final <= 1:\n",
+    "    print('Tá liberado')\n",
+    "elif pontuacao_final == 2:\n",
+    "    print ('Sus, vamos investigar mais')\n",
+    "elif pontuacao_final >= 3 and pontuacao_final <= 4:\n",
+    "    print('Cúmplice safado')\n",
+    "elif pontuacao_final == 5:\n",
+    "    print('Teje preso')\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "cbb6fb7a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Digite o número que vc quer a tabuada: 11\n",
+      "11 * 1 = 11\n",
+      "11 * 2 = 22\n",
+      "11 * 3 = 33\n",
+      "11 * 4 = 44\n",
+      "11 * 5 = 55\n",
+      "11 * 6 = 66\n",
+      "11 * 7 = 77\n",
+      "11 * 8 = 88\n",
+      "11 * 9 = 99\n",
+      "11 * 10 = 110\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Q4\n",
+    "tabuada = int(input('Digite o número que vc quer a tabuada: '))\n",
+    "for count in range(1,11):\n",
+    "    print('{} * {} = {}'.format(tabuada, count, tabuada*count))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "94598c48",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
